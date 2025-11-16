@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Followers - Premium Service</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <i class="fab fa-instagram"></i>
+                <h1>InstaFollowers Pro</h1>
+            </div>
+            <p class="tagline">Boost your Instagram presence with real followers</p>
+        </header>
+
+        <main class="main-content">
+            <div class="card">
+                <div class="card-header">
+                    <h2><i class="fas fa-rocket"></i> Send Followers</h2>
+                    <p>Enter your account details and target username</p>
+                </div>
+                
+                <form id="followers-form" class="form">
+                    <div class="form-group">
+                        <label for="username">Your Instagram Username</label>
+                        <input type="text" id="username" name="username" required placeholder="Enter your username">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password">Your Instagram Password</label>
+                        <input type="password" id="password" name="password" required placeholder="Enter your password">
+                        <small class="warning"><i class="fas fa-exclamation-triangle"></i> Use a secondary account for security</small>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="target_username">Target Username</label>
+                        <input type="text" id="target_username" name="target_username" required placeholder="Enter target username (without @)">
+                    </div>
+                    
+                    <button type="submit" id="submit-btn" class="btn-primary">
+                        <span class="btn-text">Send Followers</span>
+                        <div class="btn-loader" style="display: none;">
+                            <div class="spinner"></div>
+                            <span>Processing...</span>
+                        </div>
+                    </button>
+                </form>
+            </div>
+
+            <div class="results-section">
+                <div class="stats-card">
+                    <h3><i class="fas fa-chart-line"></i> Statistics</h3>
+                    <div class="stats-grid">
+                        <div class="stat">
+                            <span class="stat-value" id="initial-count">-</span>
+                            <span class="stat-label">Initial Followers</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-value" id="updated-count">-</span>
+                            <span class="stat-label">Current Followers</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-value" id="increase-count">-</span>
+                            <span class="stat-label">Increase</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="services-card">
+                    <h3><i class="fas fa-server"></i> Service Results</h3>
+                    <div id="services-results" class="services-list">
+                        <div class="empty-state">
+                            <i class="fas fa-inbox"></i>
+                            <p>No services run yet. Fill the form to start.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2025 InstaFollowers Pro. For educational purposes only.</p>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
